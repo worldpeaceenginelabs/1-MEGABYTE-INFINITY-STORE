@@ -8,15 +8,19 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 - You need more space? Raise the size of the store! haha
 
 ##### A weird thought maybe, but what if we would limit the on-boarding (sign-up) to 500 times a month = 16times a day = every 1,5h ??? 👀
-- We write our X-Megabyte's data.js into our static build (which is reactive and consums dynamically APIs) and drop it on edge! (200 CDNs worldwide, thats also a huge security feature) The transition to the new build is seamless thanks to Cloudflare.
+- We write our X-Megabyte's data.js into our static JAMstack build (which is reactive and consums dynamically APIs) and drop it on edge! (200 CDNs worldwide, thats a speed and also a huge security improvement) The transition to the new build is seamless thanks to Cloudflare.
 - Cloudflare Pages free account already provides 500 builds a month for free.
 - With some logic the users will not even noticing it...
 
 ##### Following the Cloudflare thought
-For 25$ a month you get already 5 concurrent builds and 5000 builds per month.<br>
-You could automatically drop data regularly on the other 4 CI/CD pipelines, not even touching your main build.(update every 8,5min)<br>
+For 25$ a month you get already 5 concurrent builds and 5000 builds per month.<br><br>
+You could automatically drop data regularly on the other 4 CI/CD pipelines, not even touching your main build.(update every 8,5min)<br><br>
 Consuming the data from your "static" page(JAMstack) on edge, via API. (static-API-static)<br>
 <br>
+Pages uploads each file on your site to Cloudflare’s globally distributed network to deliver a low latency experience to every user that visits your site. Cloudflare Pages sites can contain up to 20,000 files.
+<br><br>
+The maximum file size for a single Cloudflare Pages site asset is 25 MiB.
+<br><br>
 
 ![image](https://user-images.githubusercontent.com/67427045/215322640-9f94c832-4b3f-414a-9752-fe2af4f3dd58.png)
 <br><br>
