@@ -1,6 +1,14 @@
 # 1-MEGABYTE-STORE
-A storage logic to distribute your whole user-database, but with only 1 Megabyte on each user's device. <br><br>Works with 1, 100, 3333, and 8 Billion users but stays always 1 MB!!! <br><br>Infinity Store stores 3333 files no matter which size in 1 MB.
-<br><br>
+A storage logic to distribute your whole user-database, but with only 1 Megabyte on each user's device.<br>
+<br>
+Works with 1, 100, 3333, and 8 Billion users but stays always 1 MB!!!<br>
+<br>
+Infinity Store stores 3333 files no matter which size in 1 MB.<br>
+<br>
+Want to store more files in 1MB? Store as many files as you want inside the 3333 files. Infinite nesting!<br>
+<br>
+Strategies further down...<br>
+<br>
 
 ## How does it work?
 
@@ -18,9 +26,17 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 
 ##### Scaling/Consistency is very interesting!
 - You need to double the backups? Go for 2 Megabyte Store
-- You need more consistency? Have 2x X-Megabyte Stores mirrored, but both stored at different locations. (GunJS sync)
+- You need more consistency? Have 2 times X-Megabyte Stores mirrored, but both stored at different locations. (GunJS sync)
 - You need more resilence? Have X-times X-Megabyte Stores, mirrored or not or both, stored at X-locations.
 - You need more space? Raise the size of the store! haha
+
+##### Hash Compression / Hash Archives
+Want to store more files? Store as many files as you want inside the 3333 files. Infinite nesting!<br>
+<br>
+Example: Convert 10 sound-files each to base8 and then hash. Drop the 10 hashs into a hashcluster(L1).txt (L1 for 1 level deep) and hash the file.<br>
+<br>
+Result: Downloadsize 0.0003 MB, Storagesize 0.0003 MB, Content: 10 mp3 files, Opening time: depends on cpu power and caching stratregies
+<br><br>
 
 ##### A weird thought maybe, but what if we would limit the on-boarding (sign-up) to 500 times a month = 16times a day = every 1,5h ??? 👀
 - We write our X-Megabyte's data.js into our static JAMstack build (which is reactive and consums dynamically APIs) and drop it on edge! (200 CDNs worldwide, thats a speed and also a huge security improvement) The transition to the new build is seamless thanks to Cloudflare.
@@ -50,7 +66,7 @@ In the case of a big video it would mean long encoding and decoding times, so yo
 But we simply exchange download time and storage space for computational time, which is a good deal dependant on file size and available cpu power.<br>
 <br>
 The Infinity Store works best with very small files, so everything that is able to be compressed could go too.<br>
-Use-case dependant we also dont need 3333 backups for each application.<br>
+Use-case dependant we also dont need 3333 backups for each application, feature or community.<br>
 
 But if it comes to distributing more then the user-accounts, i (as a user) want to decide myself, what i am using my storage for.<br>
 A combination from multiple 1 Megabyte Stores and a logic of .get().on(data) subscriptions, and file-splitting could get us there.<br>
