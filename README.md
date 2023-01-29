@@ -25,6 +25,7 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 - We write our X-Megabyte's data.js into our static JAMstack build (which is reactive and consums dynamically APIs) and drop it on edge! (200 CDNs worldwide, thats a speed and also a huge security improvement) The transition to the new build is seamless thanks to Cloudflare.
 - Cloudflare Pages free account already provides 500 builds a month for free.
 - With some logic the users will not even noticing it...
+<br><br>
 
 ##### Following the Cloudflare thought
 For 25$ a month you get already 5 concurrent builds and 5000 builds per month.<br><br>
@@ -50,7 +51,7 @@ The Store works best with very small files, so everything that is able to be com
 Use-case dependant we also dont need 3333 backups for each application, feature or community.<br>
 And you dont want to have that knitting forum data chunks on your storage, because its not valueable to you.<br>
 <br>
-If it comes to distributing anything else then the webapps basic assets, i (as a user) want to decide myself, what i am using my storage for.<br>
-A combination from multiple 1 Megabyte Stores and a logic of .get().on(data) subscriptions, and file-splitting could get us there.<br>
+##### If it comes to distributing anything else then the webapps basic assets, i (as a user) want to decide myself, what i am using my storage for.<br><br>
+A combination from multiple 1 Megabyte Stores and a logic of .get().on(data) subscriptions, and maybe file-splitting could get us there.<br>
 
 Notice: A subscription of a graphics community would then sure take more space in an X Megabyte Store, than the subscription of a travel blog for instance. 
