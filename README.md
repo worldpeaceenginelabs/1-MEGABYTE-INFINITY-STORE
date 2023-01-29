@@ -44,6 +44,11 @@ The maximum file size for a single Cloudflare Pages site asset is 25 MiB.
 
 ##### 
 # Not only for user-databases
+I just realised that it works with every kind of data.<br>
+You can hash every file and every piece of data down to a hash sized 0.0003 MB.<br>
+In the case of a big video it would mean long encoding and decoding times, so you usually avoid that to do.<br>
+but we simply exchange download time in storage space for computational time, which is a good deal dependant on file size and available cpu power.<br>
+
 The 1 Megabyte Store works best with very small files, so everything that is able to be compressed could go too.<br>
 Use-case dependant we also dont need 3333 backups for each application.<br>
 
