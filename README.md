@@ -10,7 +10,7 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 ##### A weird thought maybe, but what if we would limit the on-boarding (sign-up) to 500 times a month = 16times a day = every 1,5h ??? 👀
 - We write our X-Megabyte's data.js into our static build (which is reactive and consums dynamically APIs) and drop it on edge! (200 CDNs worldwide, thats also a huge security feature) The transition to the new build is seamless thanks to Cloudflare.
 - Cloudflare Pages free account already provides 500 builds a month for free.
-- With some logic (local first, PWA offline abilities, service-workers, Gun syncing, Gun .on subscription, and notifications even if browser and or PWA closed) the users will not even noticing it...
+- With some logic the users will not even noticing it...
 
 ##### Following the Cloudflare thought
 For 25$ a month you get already 5 concurrent builds and 5000 builds per month.<br>
@@ -34,7 +34,10 @@ Consuming the data from your "static" page(JAMstack) on edge, via API. (static-A
 ##### Not enough backups? 2-MEGABYTE-STORE
 8 000 000 000 Public Keys = 2,4 Million MB - 6666 Backups<br>
 <br>
+##### I think 1 Megabyte Store will need a logic for file-splitting and reconstruction in general.(Work In Progress)<br>
+<br>
 
+##### 
 # Not only for user-databases
 The 1 Megabyte Store works best with very small files, so everything that is able to be compressed could go too.<br>
 Use-case dependant we also dont need 3333 backups for each application.<br>
@@ -42,4 +45,4 @@ Use-case dependant we also dont need 3333 backups for each application.<br>
 But if it comes to distributing more then the user-accounts, i (as a user) want to decide myself, what i am using my storage for.<br>
 A combination from multiple 1 Megabyte Stores and a logic of .get().on(data) subscriptions could get us there.<br>
 
-Just a thought: A subscription of a graphics community will sure take more space in an X Megabyte Store, than the subscription of a travel blog for instance. And you dont want to have that knitting forum data chunks on your storage, because its not valueable to you.
+Another thought - use-case: file splitting - A subscription of a graphics community would then sure take more space in an X Megabyte Store, than the subscription of a travel blog for instance. And you dont want to have that knitting forum data chunks on your storage, because its not valueable to you.
