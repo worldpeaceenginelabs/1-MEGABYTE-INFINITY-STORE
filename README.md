@@ -16,6 +16,7 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 
 # Not only for user-databases
 The 1 Megabyte Store works best with very small files, so everything that is able to be compressed could go too.<br>
+Use-case dependant we also dont need 3333 backups for each application.
 
 But if it comes to distributing more then the user-accounts, i (as a user) want to decide myself, what i am using my storage for.<br>
 A combination from multiple 1 Megabyte Stores and a logic of .get().on(data) subscriptions could work here.<br>
