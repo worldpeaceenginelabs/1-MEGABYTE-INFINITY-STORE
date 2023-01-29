@@ -1,4 +1,4 @@
-# 1-MEGABYTE-STORE
+# 1-MEGABYTE-INFINITY-STORE
 A storage logic to distribute your whole user-database, but with only 1 Megabyte on each user's device.<br>
 <br>
 Works with 1, 100, 3333, and 8 Billion users but stays always 1 MB!!!<br>
@@ -47,12 +47,14 @@ The maximum file size for a single Cloudflare Pages site asset is 25 MiB.
 
 ##### 
 # Not only for user-databases
-I just realised that it works with every kind of data.<br>
+I just realised that it could work with every kind of data.<br>
 <br>
-The Infinity Store works best with very small files, so everything that is able to be compressed could go too.<br>
+The Store works best with very small files, so everything that is able to be compressed could go too.<br>
+<br>
 Use-case dependant we also dont need 3333 backups for each application, feature or community.<br>
-
-But if it comes to distributing more then the user-accounts, i (as a user) want to decide myself, what i am using my storage for.<br>
+And you dont want to have that knitting forum data chunks on your storage, because its not valueable to you.<br>
+<br>
+If it comes to distributing anything else then the webapps basic assets, i (as a user) want to decide myself, what i am using my storage for.<br>
 A combination from multiple 1 Megabyte Stores and a logic of .get().on(data) subscriptions, and file-splitting could get us there.<br>
 
-Notice: A subscription of a graphics community would then sure take more space in an X Megabyte Store, than the subscription of a travel blog for instance. And you dont want to have that knitting forum data chunks on your storage, because its not valueable to you.
+Notice: A subscription of a graphics community would then sure take more space in an X Megabyte Store, than the subscription of a travel blog for instance. 
