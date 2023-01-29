@@ -13,11 +13,12 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 - With some logic (local first, PWA offline abilities, service-workers, Gun syncing, Gun .on subscription, and notifications even if browser and or PWA closed) the users will not even noticing it...
 
 ##### Following the Cloudflare thought
-For 25$ a month you get already 5 concurrent builds and 5000 builds per month.
+For 25$ a month you get already 5 concurrent builds and 5000 builds per month.<br>
 You could automatically drop data regularly on the other 4 CI/CD pipelines, not even touching your main build.<br>
-Consuming the data from your "static" page on edge, via API. (static-API-static)
+Consuming the data from your "static" page(JAMstack) on edge, via API. (static-API-static)<br>
+<br>
 
-![image](https://user-images.githubusercontent.com/67427045/215322340-c3a1377e-684d-47df-bfe2-28974c1093af.png)
+![image](https://user-images.githubusercontent.com/67427045/215322640-9f94c832-4b3f-414a-9752-fe2af4f3dd58.png)
 <br><br>
 
 ##### Just another thought: Containerizing X-Megabyte Stores...<br><br>
