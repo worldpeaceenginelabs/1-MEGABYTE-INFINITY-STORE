@@ -1,6 +1,5 @@
 # 1-MEGABYTE-INFINITY-STORE
-A storage logic to distribute your whole user-database, but with only 1 Megabyte on each user's device.<br>
-Works with 1, 100, 3333, and 8 Billion users but stays always 1 MB!!!<br>
+A storage logic to distribute your whole user-database, but with only 1 Megabyte on each user's device. Works with 1, 100, 3333, and 8 Billion users but stays always 1 MB!!!<br>
 <br>
 
 ## How does it work?
