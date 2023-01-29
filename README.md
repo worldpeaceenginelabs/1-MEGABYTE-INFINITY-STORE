@@ -3,12 +3,6 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 <br>
 Works with 1, 100, 3333, and 8 Billion users but stays always 1 MB!!!<br>
 <br>
-Infinity Store stores 3333 files no matter which size in 1 MB.<br>
-<br>
-Want to store more files in 1MB? Store as many files as you want inside the 3333 files. Infinite nesting!<br>
-<br>
-Strategies further down...<br>
-<br>
 
 ## How does it work?
 
@@ -29,13 +23,6 @@ Strategies further down...<br>
 - You need more consistency? Have 2 times X-Megabyte Stores mirrored, but both stored at different locations. (GunJS sync)
 - You need more resilence? Have X-times X-Megabyte Stores, mirrored or not or both, stored at X-locations.
 - You need more space? Raise the size of the store! haha
-
-##### Hash Compression / Hash Archives
-Want to store more files? Store as many files as you want inside the 3333 files. Infinite nesting!<br>
-<br>
-Example: Convert 10 sound-files each to base8 and then hash. Drop the 10 hashs into a hashcluster(L1).txt (L1 for 1 level deep) and hash the file.<br>
-<br>
-Result: Downloadsize 0.0003 MB, Storagesize 0.0003 MB, Content: 10 mp3 files, Opening time: depends on cpu power and caching stratregies
 <br><br>
 
 ##### A weird thought maybe, but what if we would limit the on-boarding (sign-up) to 500 times a month = 16times a day = every 1,5h ??? 👀
@@ -60,10 +47,7 @@ The maximum file size for a single Cloudflare Pages site asset is 25 MiB.
 
 ##### 
 # Not only for user-databases
-I just realised that it works with every kind of data, security integrated.<br><br>
-You can hash every file and every piece of data down to a hash sized 0.0003 MB.<br><br>
-In the case of a big video it would mean long encoding and decoding times, so you usually avoid that to do.<br><br>
-But we simply exchange download time and storage space for computational time, which is a good deal dependant on file size and available cpu power.<br>
+I just realised that it works with every kind of data.<br>
 <br>
 The Infinity Store works best with very small files, so everything that is able to be compressed could go too.<br>
 Use-case dependant we also dont need 3333 backups for each application, feature or community.<br>
