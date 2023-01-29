@@ -14,7 +14,7 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 
 ##### Following the Cloudflare thought
 For 25$ a month you get already 5 concurrent builds and 5000 builds per month.<br>
-You could automatically drop data regularly on the other 4 CI/CD pipelines, not even touching your main build.<br>
+You could automatically drop data regularly on the other 4 CI/CD pipelines, not even touching your main build.(update every 8,5min)<br>
 Consuming the data from your "static" page(JAMstack) on edge, via API. (static-API-static)<br>
 <br>
 
