@@ -8,7 +8,7 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 - You need more space? Raise the size of the store! haha
 
 ##### A weird thought maybe, but what if we would limit the on-boarding (sign-up) to 500 times a month = 16times a day = every 1,5h ??? 👀
-- We write our X-Megabyte's data.js into our static build (which is reactive and consums dynamically APIs) and drop it on edge! (200 CDNs worldwide, thats also a huge security feature)
+- We write our X-Megabyte's data.js into our static build (which is reactive and consums dynamically APIs) and drop it on edge! (200 CDNs worldwide, thats also a huge security feature) The transition to the new build is seamless thanks to Cloudflare.
 - Cloudflare Pages free account provides 500 builds a month for free.
 - With some logic (local first, PWA offline abilities, service-workers, Gun syncing, Gun .on subscription, and notifications even if browser and or PWA closed) the users will not even noticing it...
 
