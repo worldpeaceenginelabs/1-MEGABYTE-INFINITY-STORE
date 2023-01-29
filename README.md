@@ -9,10 +9,18 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 
 ##### A weird thought maybe, but what if we would limit the on-boarding (sign-up) to 500 times a month = 16times a day = every 1,5h ??? 👀
 - We write our X-Megabyte's data.js into our static build (which is reactive and consums dynamically APIs) and drop it on edge! (200 CDNs worldwide, thats also a huge security feature) The transition to the new build is seamless thanks to Cloudflare.
-- Cloudflare Pages free account provides 500 builds a month for free.
+- Cloudflare Pages free account already provides 500 builds a month for free.
 - With some logic (local first, PWA offline abilities, service-workers, Gun syncing, Gun .on subscription, and notifications even if browser and or PWA closed) the users will not even noticing it...
 
-##### Just a thought: Containerizing X-Megabyte Stores...<br><br>
+##### Following the Cloudflare thought
+For 25$ a month you get already 5 concurrent builds and 5000 builds per month.
+You could automatically drop data regularly on the other 4 CI/CD pipelines, not even touching your main build.<br>
+Consuming the data from your "static" page on edge, via API. (static-API-static)
+
+![image](https://user-images.githubusercontent.com/67427045/215322340-c3a1377e-684d-47df-bfe2-28974c1093af.png)
+<br><br>
+
+##### Just another thought: Containerizing X-Megabyte Stores...<br><br>
 
 ## How does it work?
 
