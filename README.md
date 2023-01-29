@@ -1,7 +1,18 @@
 # 1-MEGABYTE-STORE
 A storage logic to distribute your whole user-database, but with only 1 Megabyte on each user's device. Works with 1, 100, 3333, and 8 Billion users. Stays always 1 MB!!!<br>
 <br>
+##### Scaling/Consistency is very interesting!
+- You need to double the backups? Go for 2 Megabyte Store
+- You need more consistency? Have 2x X-Megabyte Stores mirrored, but both stored at different locations. (GunJS sync)
+- You need more resilence? Have X-times X-Megabyte Stores, mirrored or not or both, stored at X-locations.
+- You need more space? Raise the size of the store! haha
 
+##### A weird thought maybe, but what if we would limit the on-boarding (sign-up) to 500 times a month = 16times a day = every 1,5h ??? 👀
+- We write our X-Megabyte's data.js into our static build (which is reactive and consums dynamically APIs) and drop it on edge! (200 CDNs worldwide, thats also a huge security feature)
+- Cloudflare Pages free account provides 500 builds a month for free.
+- With some logic (local first, PWA offline abilities, service-workers, Gun syncing, Gun .on subscription, and notifications even if browser and or PWA closed) the users will not even noticing it...
+
+##### Just a thought: Containerizing X-Megabyte Stores...<br><br>
 
 ## How does it work?
 
