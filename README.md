@@ -1,7 +1,21 @@
 # 1-MEGABYTE-STORE
 A storage logic to distribute your whole user-database, but with only 1 Megabyte on each user's device. <br><br>Works with 1, 100, 3333, and 8 Billion users but stays always 1 MB!!! <br><br>Infinity Store stores 3333 files no matter which size in 1 MB.
 <br><br>
+
+## How does it work?
+
+- 1 ECDH Public Key = 0,0003 MB - 1 Backup<br>
+- 100 ECDH Public Keys = 0,03 MB - 100 Backups<br>
+- 3333 ECDH Public Keys = 0,9999 MB - 3333 Backups<br>
+- 8 000 000 000 Public Keys = 2,4 Million MB - 3333 Backups<br>
 <br>
+
+##### Not enough backups? 2-MEGABYTE-STORE
+8 000 000 000 Public Keys = 2,4 Million MB - 6666 Backups<br>
+<br>
+##### I think 1 Megabyte Store will need a logic for file-splitting and reconstruction in general.(Work In Progress)<br>
+<br>
+
 ##### Scaling/Consistency is very interesting!
 - You need to double the backups? Go for 2 Megabyte Store
 - You need more consistency? Have 2x X-Megabyte Stores mirrored, but both stored at different locations. (GunJS sync)
@@ -27,20 +41,6 @@ The maximum file size for a single Cloudflare Pages site asset is 25 MiB.
 <br><br>
 
 ##### Just another thought: Containerizing X-Megabyte Stores...<br><br>
-
-## How does it work?
-
-- 1 ECDH Public Key = 0,0003 MB - 1 Backup<br>
-- 100 ECDH Public Keys = 0,03 MB - 100 Backups<br>
-- 3333 ECDH Public Keys = 0,9999 MB - 3333 Backups<br>
-- 8 000 000 000 Public Keys = 2,4 Million MB - 3333 Backups<br>
-<br>
-
-##### Not enough backups? 2-MEGABYTE-STORE
-8 000 000 000 Public Keys = 2,4 Million MB - 6666 Backups<br>
-<br>
-##### I think 1 Megabyte Store will need a logic for file-splitting and reconstruction in general.(Work In Progress)<br>
-<br>
 
 ##### 
 # Not only for user-databases
