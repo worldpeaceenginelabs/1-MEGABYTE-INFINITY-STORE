@@ -13,8 +13,6 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 ##### Not enough backups? 2-MEGABYTE-STORE
 8 000 000 000 Public Keys = 2,4 Million MB - 6666 Backups<br>
 <br>
-##### I think 1 Megabyte Store will need a logic for file-splitting and reconstruction in general.(Work In Progress)<br>
-<br>
 
 ##### Scaling/Consistency is very interesting!
 - You need to double the backups? Go for 2 Megabyte Store
