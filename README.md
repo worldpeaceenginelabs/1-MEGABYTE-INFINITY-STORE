@@ -16,7 +16,7 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 
 # What does it do for now?
 
-![image](https://user-images.githubusercontent.com/67427045/215453153-2a054696-03f8-4f8a-a13d-b54d19b5732f.png)<br>
+![image](https://user-images.githubusercontent.com/67427045/215467025-0aa60e48-3446-49c1-b793-39ce3fab7874.png)<br>
 <br>
 
 ##### Scaling/Consistency is very interesting!
