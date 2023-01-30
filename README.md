@@ -14,6 +14,11 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 8 000 000 000 Public Keys = 2,4 Million MB - 6666 Backups<br>
 <br>
 
+# What does it do for now?
+
+![image](https://user-images.githubusercontent.com/67427045/215467025-0aa60e48-3446-49c1-b793-39ce3fab7874.png)<br>
+<br>
+
 ##### Scaling/Consistency is very interesting!
 - You need to double the backups? Go for 2 Megabyte Store
 - You need more consistency? Have 2 times X-Megabyte Stores mirrored, but both stored at different locations. (GunJS sync)
