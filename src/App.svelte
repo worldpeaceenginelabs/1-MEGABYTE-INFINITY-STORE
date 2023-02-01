@@ -1,53 +1,25 @@
 <script>
-  let inputValue = '';
-  let storedData = [];
+  import Gun from "gun/gun";
+  import { onMount } from 'svelte';
   
-  function handleInput(event) {
-    inputValue = event.target.value;
-  }
+  let db = Gun(['http://localhost:8765/gun']).get('XMBSTORES');
+  let text ='';
+  let newFieldValue, inputField;
 
-  function handleSubmit() {
-    storedData = JSON.parse(localStorage.getItem('data')) || [];
-    storedData.push(inputValue);
-    localStorage.setItem('data', JSON.stringify(storedData));
-    inputValue = '';
-  }
-
-  function handleDelete() {
-    storedData = JSON.parse(localStorage.getItem('data')) || [];
-    storedData.pop();
-    localStorage.setItem('data', JSON.stringify(storedData));
-  }
-
-  function handleLocalStorageLimit() {
-    console.log('Local storage size limit reached');
-  }
-
-  window.addEventListener('storage', event => {
-    if (event.key === 'data' && event.newValue.length > 1048576) {
-      handleLocalStorageLimit();
-    }
+  onMount(async () => {
+    const store = db.get('1-megabyte-store');
+    store.on(function(data, key){
+      if(data) {
+        text = data;
+        localStorage.setItem('1-megabyte-store', data);
+      } else {
+        text = localStorage.getItem('1-megabyte-store') || '';
+        store.put(text);
+      }
+    });
   });
+
+
 </script>
-
-<fieldset>
-<form>
-<input type="text" bind:value={inputValue} on:input={handleInput} />
-<button on:click|preventDefault={handleSubmit}>Send</button>
-<button on:click|preventDefault={handleDelete}>Delete</button>
-</form>
-
-
-<ol>
-  
-  {#each storedData as item}
-    <li>{item}</li>
-  {/each}
-  
-</ol>
-</fieldset>
-
-<style>
-fieldset{position: fixed; top: 1em; left: 1em;}
-
-</style>
+<input type="text" bind:value={text}/>
+<button on:click={() => db.get('1-megabyte-store').put(text)}>Save</button>
