@@ -1,4 +1,4 @@
-# 1-MEGABYTE-INFINITY-STORE
+# 1-MEGABYTE-INFINITY-STORE (WORK IN PROGRESS, coming soon...)
 A storage logic to distribute your whole user-database, but with only 1 Megabyte on each user's device. Works with 1, 100, 3333, and 8 Billion users but stays always 1 MB!!!<br>
 <br>
 
@@ -35,7 +35,8 @@ A storage logic to distribute your whole user-database, but with only 1 Megabyte
 
 ##### Following the Cloudflare thought
 For 25$ a month you get already 5 concurrent builds and 5000 builds per month.<br><br>
-You could automatically drop data regularly on the other 4 CI/CD pipelines, not even touching your main build.(update every 8,5min)<br><br>
+You could automatically drop data regularly on the other 4 CI/CD pipelines, not even touching your main build.<br>
+(5000/720 = 6,9 builds per hour)(20000/720 = 27,7 builds per hour(or one per 30min))<br><br>
 Consuming the data from your "static" page(JAMstack) on edge, via API. (static-API-static)<br>
 <br>
 Pages uploads each file on your site to Cloudflare’s globally distributed network to deliver a low latency experience to every user that visits your site. Cloudflare Pages sites can contain up to 20,000 files.
